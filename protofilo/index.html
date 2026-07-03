@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Mohamed Sami, an aspiring AI Engineer and Software Developer studying at Cairo University.">
+    <meta name="keywords" content="Mohamed Sami, AI Engineer, Artificial Intelligence, Software Developer, Portfolio, Cairo University">
+    <meta name="author" content="Mohamed Sami">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Mohamed Sami | AI Engineer Portfolio">
+    <meta property="og:description" content="Discover the projects, skills, and goals of Mohamed Sami, a passionate Artificial Intelligence student.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mohamedsami-ai.com/">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=Mohamed+Sami+Portfolio">
+    
+    <title>Mohamed Sami | AI Engineer & Software Developer</title>
+    
+    <!-- Favicon Placeholder -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <!-- Starfield Canvas -->
+        <canvas id="star-canvas"></canvas>
+
+        <div class="preloader-content" id="preloader-content">
+
+            <!-- Phase 1: EKG Heartbeat -->
+            <div id="phase-ekg" class="preloader-phase">
+                <canvas id="ekg-canvas" width="320" height="80"></canvas>
+                <div class="phase-label" id="ekg-label"></div>
+            </div>
+
+            <!-- Phase 2: Creative Typewriter -->
+            <div id="phase-name" class="preloader-phase">
+                <div class="tw-prompt" id="tw-prompt"></div>
+                <div class="matrix-name" id="matrix-name">
+                    <span id="tw-name"></span><span class="tw-cursor" id="tw-cursor">█</span>
+                </div>
+            </div>
+
+            <!-- ACCESS GRANTED -->
+            <div class="access-granted" id="access-granted">ACCESS GRANTED</div>
+        </div>
+    </div>
+
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <!-- Header & Navbar -->
+    <header class="header" id="header">
+        <nav class="navbar container">
+            <a href="#home" class="logo">
+                <span class="logo-text">Eng.<span class="accent">Mohamed Sami</span></span>
+            </a>
+            
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
+                    <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                    <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                    <li class="nav-item"><a href="#goals" class="nav-link">Goals</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="nav-toggle" id="nav-toggle" aria-label="Toggle Menu" role="button" tabindex="0">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero section" id="home">
+            <div class="container hero-container grid">
+                <div class="hero-content reveal">
+                    <span class="greeting">Hello, I'm</span>
+                    <h1 class="hero-title">Mohamed Sami</h1>
+                    <h2 class="hero-subtitle">
+                        <span id="typing-text"></span><span class="cursor">&nbsp;</span>
+                    </h2>
+                    <p class="hero-description">
+                        A second-year Artificial Intelligence student at Cairo University. I'm passionate about Artificial Intelligence, software development, and continuously improving my programming skills. My goal is to become an AI Engineer and build intelligent systems that solve real-world problems, including my dream of creating my first intelligent robot.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            View Projects <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="#contact" class="btn btn-outline">
+                            Contact Me <i class="fa-regular fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image reveal">
+                    <div class="image-wrapper">
+                        <!-- Profile image -->
+                        <div class="profile-image-container">
+                            <img src="images/profile.jpg" alt="Mohamed Sami" class="profile-img">
+                        </div>
+                        <div class="glow"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about section" id="about">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-title">About <span class="accent">Me</span></h2>
+                    <p class="section-subtitle">My journey and passion</p>
+                </div>
+                
+                <div class="about-container grid reveal">
+                    <div class="about-image">
+                        <div class="circular-image-container">
+                            <img src="images/profile.jpg" alt="Mohamed Sami" class="about-profile-img">
+                        </div>
+                    </div>
+                    <div class="about-data">
+                        <p class="about-description">
+                            I am a dedicated Artificial Intelligence student with a strong passion for learning modern technologies and developing intelligent software solutions. I enjoy solving problems, exploring AI concepts, and continuously expanding my programming knowledge. 
+                        </p>
+                        <p class="about-description">
+                            I believe that consistency, curiosity, and continuous learning are the keys to becoming a successful AI Engineer. My long-term vision is to contribute to innovative AI technologies that positively impact people's lives.
+                        </p>
+                        <div class="about-stats grid">
+                            <div class="stat-item">
+                                <h3 class="stat-title"><span class="counter" data-target="2">0</span>+</h3>
+                                <span class="stat-text">Years of Study</span>
+                            </div>
+                            <div class="stat-item">
+                                <h3 class="stat-title"><span class="counter" data-target="10">0</span>+</h3>
+                                <span class="stat-text">Projects Built</span>
+                            </div>
+                            <div class="stat-item">
+                                <h3 class="stat-title"><span class="counter" data-target="5">0</span>+</h3>
+                                <span class="stat-text">Technologies</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section class="education section" id="education">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-title">My <span class="accent">Education</span></h2>
+                    <p class="section-subtitle">Academic background</p>
+                </div>
+                
+                <div class="education-container reveal">
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content glass-card">
+                                <h3 class="timeline-title">Cairo University</h3>
+                                <h4 class="timeline-subtitle">Faculty of Artificial Intelligence</h4>
+                                <div class="timeline-meta">
+                                    <span class="timeline-date"><i class="fa-regular fa-calendar"></i> Current Year: Second Year</span>
+                                </div>
+                                <p class="timeline-text">
+                                    Focusing on core concepts of Artificial Intelligence, programming fundamentals, mathematics for machine learning, and software engineering principles.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills section" id="skills">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-title">My <span class="accent">Skills</span></h2>
+                    <p class="section-subtitle">Technologies and tools I work with</p>
+                </div>
+                
+                <div class="skills-container grid reveal">
+                    <!-- Programming Languages -->
+                    <div class="skill-category glass-card">
+                        <h3 class="skill-category-title"><i class="fa-solid fa-code"></i> Programming Languages</h3>
+                        <div class="skill-list">
+                            <div class="skill-item">
+                                <div class="skill-icon"><i class="fa-brands fa-cuttlefish"></i></div>
+                                <span class="skill-name">C++</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon"><i class="fa-brands fa-php"></i></div>
+                                <span class="skill-name">PHP</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tools -->
+                    <div class="skill-category glass-card">
+                        <h3 class="skill-category-title"><i class="fa-solid fa-toolbox"></i> Tools</h3>
+                        <div class="skill-list">
+                            <div class="skill-item">
+                                <div class="skill-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                                <span class="skill-name">VS Code</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon"><i class="fa-brands fa-git-alt"></i></div>
+                                <span class="skill-name">Git</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon"><i class="fa-brands fa-github"></i></div>
+                                <span class="skill-name">GitHub</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Currently Learning -->
+                    <div class="skill-category glass-card">
+                        <h3 class="skill-category-title"><i class="fa-solid fa-book-open-reader"></i> Currently Learning</h3>
+                        <div class="skill-list">
+                            <div class="skill-item">
+                                <div class="skill-icon"><i class="fa-solid fa-brain"></i></div>
+                                <span class="skill-name">Artificial Intelligence</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon"><i class="fa-solid fa-network-wired"></i></div>
+                                <span class="skill-name">Machine Learning</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon"><i class="fa-solid fa-puzzle-piece"></i></div>
+                                <span class="skill-name">Problem Solving</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects section" id="projects">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-title">My <span class="accent">Projects</span></h2>
+                    <p class="section-subtitle">Recent work and future plans</p>
+                </div>
+                
+                <div class="project-filters reveal">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="current">Current</button>
+                    <button class="filter-btn" data-filter="university">University</button>
+                    <button class="filter-btn" data-filter="future">Future Plans</button>
+                </div>
+                
+                <div class="projects-container grid reveal">
+                    <!-- Future Projects -->
+                    <div class="project-card glass-card" data-category="future">
+                        <div class="project-img-wrapper">
+                            <img src="https://via.placeholder.com/600x400/1a1a2e/38bdf8?text=AI+Chatbot" alt="AI Chatbot" class="project-img lazy" loading="lazy">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="project-link" aria-label="GitHub Repository"><i class="fa-brands fa-github"></i></a>
+                                    <a href="#" class="project-link" aria-label="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">AI Chatbot</h3>
+                            <p class="project-description">An intelligent conversational agent capable of understanding natural language and providing contextual responses.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">NLP</span>
+                                <span class="tech-tag">Machine Learning</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card glass-card" data-category="future">
+                        <div class="project-img-wrapper">
+                            <img src="https://via.placeholder.com/600x400/1a1a2e/8b5cf6?text=Face+Detection" alt="Face Detection" class="project-img lazy" loading="lazy">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="project-link" aria-label="GitHub Repository"><i class="fa-brands fa-github"></i></a>
+                                    <a href="#" class="project-link" aria-label="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Face Detection</h3>
+                            <p class="project-description">A computer vision application that detects and tracks human faces in real-time video streams.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">OpenCV</span>
+                                <span class="tech-tag">C++</span>
+                                <span class="tech-tag">Deep Learning</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card glass-card" data-category="future">
+                        <div class="project-img-wrapper">
+                            <img src="https://via.placeholder.com/600x400/1a1a2e/38bdf8?text=Emotion+Detection" alt="Emotion Detection" class="project-img lazy" loading="lazy">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="project-link" aria-label="GitHub Repository"><i class="fa-brands fa-github"></i></a>
+                                    <a href="#" class="project-link" aria-label="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Emotion Detection</h3>
+                            <p class="project-description">An AI model designed to analyze facial expressions and classify human emotions accurately.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Computer Vision</span>
+                                <span class="tech-tag">Neural Networks</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card glass-card" data-category="university">
+                        <div class="project-img-wrapper">
+                            <img src="https://via.placeholder.com/600x400/1a1a2e/8b5cf6?text=Student+Management" alt="Student Management System" class="project-img lazy" loading="lazy">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="project-link" aria-label="GitHub Repository"><i class="fa-brands fa-github"></i></a>
+                                    <a href="#" class="project-link" aria-label="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Student Management System</h3>
+                            <p class="project-description">A comprehensive academic project to manage student records, grades, and administrative tasks.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">PHP</span>
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">HTML/CSS</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card glass-card" data-category="current">
+                        <div class="project-img-wrapper">
+                            <img src="https://via.placeholder.com/600x400/1a1a2e/38bdf8?text=Calculator" alt="Calculator" class="project-img lazy" loading="lazy">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="project-link" aria-label="GitHub Repository"><i class="fa-brands fa-github"></i></a>
+                                    <a href="#" class="project-link" aria-label="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Calculator</h3>
+                            <p class="project-description">A feature-rich calculator application with a modern user interface and scientific functions.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">C++</span>
+                                <span class="tech-tag">Algorithms</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card glass-card" data-category="current">
+                        <div class="project-img-wrapper">
+                            <img src="https://via.placeholder.com/600x400/1a1a2e/8b5cf6?text=To+Do+App" alt="To Do App" class="project-img lazy" loading="lazy">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="project-link" aria-label="GitHub Repository"><i class="fa-brands fa-github"></i></a>
+                                    <a href="#" class="project-link" aria-label="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">To Do App</h3>
+                            <p class="project-description">A task management application to help users organize their daily activities efficiently.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Web Tech</span>
+                                <span class="tech-tag">Local Storage</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Goals Section -->
+        <section class="goals section" id="goals">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-title">Professional <span class="accent">Goals</span></h2>
+                    <p class="section-subtitle">What drives me forward</p>
+                </div>
+                
+                <div class="goals-container grid reveal">
+                    <div class="goal-card glass-card">
+                        <div class="goal-icon"><i class="fa-solid fa-user-tie"></i></div>
+                        <h3 class="goal-title">Become an AI Engineer</h3>
+                        <p class="goal-description">Master the principles of AI to design robust, scalable, and intelligent software systems.</p>
+                    </div>
+                    <div class="goal-card glass-card">
+                        <div class="goal-icon"><i class="fa-solid fa-microchip"></i></div>
+                        <h3 class="goal-title">Build Intelligent Systems</h3>
+                        <p class="goal-description">Develop AI-driven applications that can analyze data, learn patterns, and solve real-world problems.</p>
+                    </div>
+                    <div class="goal-card glass-card">
+                        <div class="goal-icon"><i class="fa-solid fa-robot"></i></div>
+                        <h3 class="goal-title">Create My First Robot</h3>
+                        <p class="goal-description">Combine hardware and software to build an autonomous intelligent robot from scratch.</p>
+                    </div>
+                    <div class="goal-card glass-card">
+                        <div class="goal-icon"><i class="fa-solid fa-diagram-project"></i></div>
+                        <h3 class="goal-title">Learn Machine Learning</h3>
+                        <p class="goal-description">Deepen my understanding of algorithms, neural networks, and data processing techniques.</p>
+                    </div>
+                    <div class="goal-card glass-card">
+                        <div class="goal-icon"><i class="fa-brands fa-osi"></i></div>
+                        <h3 class="goal-title">Contribute to Open Source</h3>
+                        <p class="goal-description">Give back to the developer community by sharing code, libraries, and collaborating on projects.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact section" id="contact">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-title">Get In <span class="accent">Touch</span></h2>
+                    <p class="section-subtitle">Let's connect and collaborate</p>
+                </div>
+                
+                <div class="contact-container grid reveal">
+                    <div class="contact-info glass-card">
+                        <h3 class="contact-title">Contact Information</h3>
+                        <p class="contact-text">Feel free to reach out to me for collaborations, projects, or just to say hi!</p>
+                        
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                                <div>
+                                    <h4 class="contact-item-title">Email</h4>
+                                    <a href="mailto:225213@oust.edu.eg" class="contact-item-link">225213@oust.edu.eg</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-socials">
+                            <h4 class="socials-title">Follow Me</h4>
+                            <div class="social-links">
+                                <a href="https://github.com/mohmed821" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/mohmed-sami-9317603a0" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+                                <a href="https://www.facebook.com/mohamed.samy.648542" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+                                <a href="https://www.instagram.com/mohamed_sami821" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                                <a href="https://wa.me/201275738410" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="WhatsApp">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-container glass-card">
+                        <form action="#" class="contact-form" id="contact-form">
+                            <h3 class="contact-title">Send a Message</h3>
+                            
+                            <div class="form-group">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" id="name" class="form-input" placeholder="Your Name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" id="email" class="form-input" placeholder="Your Email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject" class="form-label">Subject</label>
+                                <input type="text" id="subject" class="form-input" placeholder="Subject" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea id="message" cols="30" rows="5" class="form-input" placeholder="Your Message" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-block">
+                                Send Message <i class="fa-regular fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-content">
+                <a href="#home" class="logo">
+                    <span class="logo-text">Eng.<span class="accent">Mohamed Sami</span></span>
+                </a>
+                <p class="footer-text">Building the future of artificial intelligence, one line of code at a time.</p>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2026 Mohamed Sami. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll To Top Button -->
+    <a href="#home" class="scroll-top" id="scroll-top" aria-label="Scroll to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>
